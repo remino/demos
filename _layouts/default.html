@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<title>{{ page.title }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{{ '/site.css' | relative_url }}" />
 		<link
 			rel="stylesheet"
 			href="{{ page.url | relative_url | append: 'style.css' }}"
@@ -15,5 +16,12 @@
 	</head>
 	<body>
 		{{ content }}
+		<nav id="remino-shards-nav">
+			<a
+				href="{{ site.github.repository_url }}/tree/main/{{ page.url | relative_url | split: '/' | shift | shift | join: '/' }}"
+				target="_blank"
+				>See code on GitHub</a
+			>
+		</nav>
 	</body>
 </html>
