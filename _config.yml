@@ -1,0 +1,21 @@
+title: jeksite
+description: >-
+  Plain and simple Jekyll site template ideal for GitHub Pages.
+
+baseurl: /jeksite
+domain: remino.github.io
+url: https://remino.github.io
+
+defaults:
+  - scope:
+      type: pages
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - jeksite
+
+include:
+  - .htaccess
