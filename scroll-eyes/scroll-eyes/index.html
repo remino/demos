@@ -1,0 +1,18 @@
+---
+title: Scroll Eyes
+source: https://codepen.io/remino/pen/rNPojqX
+---
+
+<figure>
+	{% for i in (1..2) %}
+	<div class="eye">
+		<div class="eye__iris"></div>
+	</div>
+	{% endfor %}
+</figure>
+
+<ul>
+	{% for i in (1..11) %}
+	<li>{{ i | times: 10 }}%</li>
+	{% endfor %}
+</ul>

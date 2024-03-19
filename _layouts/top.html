@@ -4,16 +4,9 @@
 		<meta charset="UTF-8" />
 		<title>{{ page.title }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="{{ page.url | relative_url | append: 'style.css' }}"
-		/>
-		<script
-			defer
-			src="{{ page.url | relative_url | append: 'script.js' }}"
-		></script>
+		<link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
 	</head>
 	<body>
-		{{ content }}
+		<main>{{ content }}</main>
 	</body>
 </html>

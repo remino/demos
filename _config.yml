@@ -1,19 +1,22 @@
-title: jeksite
-description: >-
-  Plain and simple Jekyll site template ideal for GitHub Pages.
+title: shards
+description: "Shards: Sandbox Pages"
 
-baseurl: /jeksite
-domain: remino.github.io
-url: https://remino.github.io
+baseurl: /shards
+url: https://remino.github.io/
+
+readme_index:
+  enabled: true
+  remove_originals: true
+  with_frontmatter: true
 
 defaults:
   - scope:
+      path: ""
       type: pages
     values:
       layout: default
 
 exclude:
-  - README.md
   - LICENSE.txt
   - jeksite
 
