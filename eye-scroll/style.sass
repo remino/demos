@@ -4,46 +4,20 @@
 	--color-bg: #fff
 	--color-fg: #000
 
-@supports (animation-timeline: scroll())
-	@keyframes spin
-		from
-			transform: rotate(0deg)
-		to
-			transform: rotate(360deg)
-
-	@keyframes bg-color
-		0%, 100%
-			background-color: hsl(0deg,100%,50%)
-		25%
-			background-color: hsl(90deg,100%,50%)
-		50%
-			background-color: hsl(180deg,100%,50%)
-		75%
-			background-color: hsl(270deg,100%,50%)
-
-	body
-		animation: bg-color linear both
-		animation-timeline: scroll()
-		animation-range: 0% 100%
-
-	.eye
-		animation: spin linear both
-		animation-timeline: scroll()
-		animation-range: 0% 100%
-
 html, body
-	background: var(--color-bg)
 	margin: 0
 	padding: 0
 
 body
+	background: var(--color-bg)
 	color: var(--color-fg)
+	font-family: sans-serif
 	min-height: 100%
 
 figure
 	align-items: center
 	box-sizing: border-box
-	display: flex
+	display: none
 	flex-flow: row nowrap
 	gap: 1rem
 	height: 100vh
@@ -61,7 +35,7 @@ html
 
 ul
 	align-items: center
-	display: flex
+	display: none
 	flex-flow: column nowrap
 	font-size: 2rem
 	justify-content: center
@@ -99,3 +73,44 @@ ul
 		top: 5%
 		transform: translateX(-50%)
 		width: auto
+
+.no-support
+	align-items: center
+	display: flex
+	flex-flow: column
+	justify-content: center
+	min-height: 100%
+	width: 100%
+
+@supports (animation-timeline: scroll())
+	@keyframes spin
+		from
+			transform: rotate(0deg)
+		to
+			transform: rotate(360deg)
+
+	@keyframes bg-color
+		0%, 100%
+			background-color: hsl(0deg,100%,50%)
+		25%
+			background-color: hsl(90deg,100%,50%)
+		50%
+			background-color: hsl(180deg,100%,50%)
+		75%
+			background-color: hsl(270deg,100%,50%)
+
+	body
+		animation: bg-color linear both
+		animation-timeline: scroll()
+		animation-range: 0% 100%
+
+	figure, ul
+		display: flex
+
+	.eye
+		animation: spin linear both
+		animation-timeline: scroll()
+		animation-range: 0% 100%
+
+	.no-support
+		display: none
