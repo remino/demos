@@ -1,4 +1,4 @@
-# demos
+# remino/demos
 
 Little HTML pages with CSS & JavaScript used as samples, exercices, and demos.
 
