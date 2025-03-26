@@ -3,7 +3,7 @@ layout: top
 ---
 # {{ site.title }}
 
-[Code](https://github.com/remino/demos)
+[Code](https://github.com/remino/demo)
 
 {% for page in site.html_pages %}
   {% assign url_parts = page.url | split: "." | first | split: "/" %}
